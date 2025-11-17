@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1視察 反省会 - 2025年11月17日</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(45deg, #1e5799, #207cca);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 28px;
+        }
+        
+        .header .meta {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        /* メインバナー画像（全体表示） */
+        .image-banner {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+            border-bottom: 5px solid #207cca;
+            display: block;
+        }
+        
+        /* 参加者画像用のスタイル */
+        .participant-photos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .photo-item {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+            max-width: 220px;
+        }
+        
+        .photo-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #207cca;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .photo-item.top img {
+            object-position: top;
+        }
+        
+        .photo-item.middle img {
+            object-position: center;
+        }
+        
+        .photo-item.bottom img {
+            object-position: bottom;
+        }
+        
+        .photo-item .label {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #1e5799;
+        }
+        
+        .timeline {
+            padding: 40px;
+            position: relative;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 60px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #1e5799, #207cca);
+        }
+        
+        .topic-item {
+            margin-bottom: 40px;
+            position: relative;
+            padding-left: 100px;
+        }
+        
+        .topic-item::before {
+            content: '';
+            position: absolute;
+            left: 48px;
+            top: 10px;
+            width: 25px;
+            height: 25px;
+            background: #207cca;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px #207cca;
+        }
+        
+        .topic-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1e5799;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .topic-content {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            line-height: 1.6;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .footer {
+            background: #1e5799;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .next-meeting {
+            background: #fff;
+            color: #1e5799;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .ai-tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .ai-tool {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #b3d9ff;
+        }
+        
+        /* 画像トリミング位置を示す説明 */
+        .photo-guide {
+            background: #fff3cd;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline {
+                padding: 20px;
+            }
+            
+            .topic-item {
+                padding-left: 60px;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .topic-item::before {
+                left: 18px;
+            }
+            
+            .participant-photos {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .photo-item {
+                max-width: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ヘッダー部分 -->
+        <div class="header">
+            <h1>M1視察 反省会</h1>
+            <div class="meta">
+                <div>2025年11月17日</div>
+                <div>株式会社 松代商店</div>
+            </div>
+        </div>
+        
+        <!-- メインバナー画像（全体表示） -->
+        <img src="1761405044459.jpg" alt="明治乳業特豹店 看板" class="image-banner">
+        
+        <!-- トリミング位置の説明 -->
+        <div class="photo-guide">
+            <strong>📸 画像活用ガイド：</strong>以下の画像は同一画像の異なる部分を切り出して表示しています
+        </div>
+        
+        <!-- 参加者画像（トリミングして複数表示） -->
+        <div class="participant-photos">
+            <div class="photo-item top">
+                <img src="1761405044459.jpg" alt="上段の参加者">
+                <div class="label">上段：松代 崇（代表）</div>
+            </div>
+            <div class="photo-item middle">
+                <img src="1761405044459.jpg" alt="中段の参加者">
+                <div class="label">中段：浅見 幸彦</div>
+            </div>
+            <div class="photo-item bottom">
+                <img src="1761405044459.jpg" alt="下段の参加者">
+                <div class="label">下段：その他メンバー</div>
+            </div>
+        </div>
+        
+        <!-- タイムライン -->
+        <div class="timeline">
+            <h2 style="text-align: center; color: #1e5799; margin-bottom: 40px;">議事録サマリー</h2>
+            
+            <div class="topic-item">
+                <div class="topic-title">📱 インスタグラム活動の速さ</div>
+                <div class="topic-content">
+                    <div class="highlight">
+                        <strong>キーポイント：</strong>ネ岸さんがM1視察後、1週間も経たないうちにインスタを積極的に更新開始
+                    </div>
+                    <ul>
+                        <li>1人カラオケの動画などを既に2本以上投稿</li>
+                        <li>自ら登場して積極的に発信</li>
+                        <li>自発的な活動が早い段階で始まっている</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="topic-item">
+                <div class="topic-title">💻 プラスコードとChatGPT活用</div>
+                <div class="topic-content">
+                    <div class="highlight">
+                        <strong>松本さん：</strong>プラスコードを自分で作成し、ChatGPTを業務に活用開始
+                    </div>
+                    <ul>
+                        <li>メンバーが3万円の有料版に加入している模様</li>
+                        <li>松代さんは「もったいない」と指摘</li>
+                        <li>使い道がなくなってきた段階に達している</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="topic-item">
+                <div class="topic-title">🎪 埼玉のイベント状況</div>
+                <div class="topic-content">
+                    <div class="highlight">
+                        <strong>好調：</strong>産業祭など土日のイベントが集中し、好調な数字を記録
+                    </div>
+                    <ul>
+                        <li>10月、11月はイベントで数字が稼げている</li>
+                        <li>特に吉野さんの「マルシェワゴン」が話題</li>
+                        <li>キャンプ用カートを改造した販促ツール</li>
+                        <li>下にサンプル・パンフレットを載せて説明</li>
+                        <li>明治の要望を受けて試験的に実施</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="topic-item">
+                <div class="topic-title">🔍 ChatGPTによる適正検査の開発</div>
+                <div class="topic-content">
+                    <div class="highlight">
+                        <strong>浅見さんが開発：</strong>80問の適正検査をChatGPTで作成・検証済み
+                    </div>
+                    <ul>
+                        <li>スカウターと同様の5段階評価方式</li>
+                        <li>谷中さんの結果をテストし、スカウターと同様の結果を確認</li>
+                        <li>配達向き・営業向き・離職リスク・やる気の4部門で判定</li>
+                        <li>80問の質問で構成</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="topic-item">
+                <div class="topic-title">🤖 AIツール活用の最前線</div>
+                <div class="topic-content">
+                    <div class="highlight">
+                        <strong>松代さんの提唱：</strong>「全てを図に、HTML化して視覚化」
+                    </div>
+                    <p>おすすめのAIツール：</p>
+                    <div class="ai-tools">
+                        <div class="ai-tool">
+                            <strong>Claude</strong><br>
+                            <small>デザインが最も綺麗<br>HTML出力に最適</small>
+                        </div>
+                        <div class="ai-tool">
+                            <strong>DeepSeek</strong><br>
+                            <small>中国製だが高性能<br>無料版でも十分</small>
+                        </div>
+                        <div class="ai-tool">
+                            <strong>Kimi (K2シンキング)</strong><br>
+                            <small>中国製最新AI<br>話題性高い</small>
+                        </div>
+                        <div class="ai-tool">
+                            <strong>ChatGPT</strong><br>
+                            <small>デザイン系はやや弱い<br>テキスト処理は強力</small>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px;"><strong>活用方法：</strong>録音データを文字起こし→AIに「図でHTMLで作成」と指示→URL生成で共有</p>
+                </div>
+            </div>
+            
+            <div class="topic-item">
+                <div class="topic-title">👥 人材採用の課題</div>
+                <div class="topic-content">
+                    <div class="highlight">
+                        <strong>共通の悩み：</strong>営業職の採用がうまくいかない
+                    </div>
+                    <ul>
+                        <li>どの店舗も営業が集まらない</li>
+                        <li>浅見さん：1000-1200件のアポでも改善策模索中</li>
+                        <li>松代さん：スカウター結果が悪いため面接を中止したケースも</li>
+                        <li>仕組み自体を変える必要があるとの認識</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="topic-item">
+                <div class="topic-title">📅 今後の予定</div>
+                <div class="topic-content">
+                    <div class="highlight">
+                        <strong>M1開催：</strong>次回は年明け1月19日（金）を提案
+                    </div>
+                    <ul>
+                        <li>12月はイベントや忘年会で忙しいため見送り</li>
+                        <li>専務さんの来訪も予定されている</li>
+                        <li>東京での5スター会議も控えている</li>
+                        <li>松代さんは広島での明治関連イベント参加で都合が悪い</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="topic-item">
+                <div class="topic-title">💡 今回の主な学びと実践</div>
+                <div class="topic-content">
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 10px; background: #e8f5e9; margin: 5px 0; border-left: 4px solid #4caf50;">✓ インスタ活動の重要性と即座性</li>
+                        <li style="padding: 10px; background: #e8f5e9; margin: 5px 0; border-left: 4px solid #4caf50;">✓ ChatGPTを活用した適正検査の実用化</li>
+                        <li style="padding: 10px; background: #e8f5e9; margin: 5px 0; border-left: 4px solid #4caf50;">✓ マルシェワゴンなどのイベント販促ツールの有効性</li>
+                        <li style="padding: 10px; background: #e8f5e9; margin: 5px 0; border-left: 4px solid #4caf50;">✓ 情報をHTML・図解化して視覚的に共有する方法</li>
+                        <li style="padding: 10px; background: #e8f5e9; margin: 5px 0; border-left: 4px solid #4caf50;">✓ 採用難を打破するための仕組み改革の必要性</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- フッター -->
+        <div class="footer">
+            <div class="next-meeting">
+                <h3>次回開催予定</h3>
+                <p><strong>2026年1月19日（金） 15:00～</strong></p>
+                <p>※12月はイベント・忘年会で多忙のため、年明けに調整</p>
+            </div>
+            <p style="margin-top: 20px;">
+                作成：Claude AI & HTML技術を活用した自動生成議事録<br>
+                提供：株式会社 松代商店
+            </p>
+        </div>
+    </div>
+</body>
+</html>
